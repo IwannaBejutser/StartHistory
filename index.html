@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>MaxGraph New Site</title>
+  <link
+    rel="preload"
+    href="fonts/Montserrat-Medium.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat-SemiBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Roboto-Bold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/SourceSansPro-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/SuisseIntl-Regular-WebTrial.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/SuisseIntl-SemiBold-WebTrial.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container header__container">
+    <a href="#" class="header__logo">StartTheHistory</a>
+    <button
+      class="btn-reset burger"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+      data-burger
+    >
+      <span class="burger__line"></span>
+    </button>
+  </div>
+</header>
+
+    <main class="main">
+    <section class="hero">
+  <video
+    id="background-video"
+    src="./videos/earth.mp4"
+    autoplay
+    loop
+    muted
+  ></video>
+  <div class="hero__content">
+    <h1 class="hero__title">
+      <span class="hero__title--span">То, что</span> изменит ваше представление
+      о мире инвестиций
+    </h1>
+    <div class="hero__inner">
+      <p class="hero__text hero__text--left">
+        <b>То, что даст</b> вам преимущество перед остальными инвесторами.
+      </p>
+      <button class="btn-reset hero__btn">Подробнее</button>
+      <p class="hero__text hero__text--right"><b>То, что</b> следует знать.</p>
+    </div>
+  </div>
+</section>
+
+    <section class="about section-offset">
+  <div class="container about__container">
+    <h2 class="about__subtitle subtitle">Почему мне можно доверять?</h2>
+    <ul class="list-reset about__list">
+      <li class="about__item">
+        <article class="about__article article">
+          <span class="article__number">1</span>
+          <p class="article__name">6 лет стажа.</p>
+          <p class="article__info">Инвестор со стажем.</p>
+        </article>
+      </li>
+      <li class="about__item">
+        <article class="about__article article">
+          <span class="article__number">2</span>
+          <p class="article__name">13.000 учеников.</p>
+          <p class="article__info">
+            Через меня прошло более 13.000 учеников за 2 года.
+          </p>
+        </article>
+      </li>
+      <li class="about__item">
+        <img
+          loading="lazy"
+          src="./img/about-1.png"
+          class="article__image"
+          width="230"
+          height="169"
+          alt=""
+        />
+      </li>
+      <li class="about__item">
+        <article class="about__article article">
+          <span class="article__number">3</span>
+          <p class="article__name">Аудитория в 310.000 человек.</p>
+          <p class="article__info">
+            Владелец одной из крупнейших сеток телеграмм каналов по
+            инвестициям.
+          </p>
+        </article>
+      </li>
+      <li class="about__item about__item--image">
+        <img
+          loading="lazy"
+          src="./img/about-2.png"
+          class="article__image article__image--top"
+          width="237"
+          height="225"
+          alt=""
+        />
+      </li>
+      <li class="about__item">
+        <article class="about__article article">
+          <span class="article__number">4</span>
+          <p class="article__name">Более 3 лет.</p>
+          <p class="article__info">Развиваю инвестиционное сообщество в СНГ.</p>
+        </article>
+      </li>
+      <li class="about__item">
+        <article class="about__article article">
+          <span class="article__number">5</span>
+          <p class="article__name">Мой портфель.</p>
+          <p class="article__info">
+            Я не скрываю свой результат торговли и открыто публикую портфель.
+          </p>
+        </article>
+      </li>
+      <li class="about__item">
+        <img
+          loading="lazy"
+          src="./img/about-3.png"
+          class="article__image"
+          width="276"
+          height="147"
+          alt=""
+        />
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <section class="advantages section-offset">
+  <div class="container advantages__container">
+    <h2 class="advantages__subtitle subtitle">Что вы получите?</h2>
+    <div class="advantages__content">
+      <ul class="list-reset advantages__list">
+        <li class="advantages__item">
+          <article class="item__card">
+            <span class="item__name"
+              >Уникальную книгу, в которую я вместил все свои 6 лет опыта
+              торговли.</span
+            >
+          </article>
+        </li>
+        <li class="advantages__item advantages__item--big">
+          <img
+            loading="lazy"
+            src="./img/you-get.png"
+            class="advantages__image"
+            width="539"
+            height="305"
+            alt=""
+          />
+        </li>
+        <li class="advantages__item">
+          <article class="item__card">
+            <span class="item__name"
+              >Задачник, который даст вам полное усвоение пройденного
+              материала.</span
+            >
+          </article>
+        </li>
+        <li class="advantages__item">
+          <article class="item__card">
+            <span class="item__name">Бот-инсайдер на год. </span>
+            <p class="item__descr">
+              Подарок каждому ученику. Он поможет вам в будущей торговле.
+            </p>
+          </article>
+        </li>
+        <li class="advantages__item">
+          <article class="item__card">
+            <span class="item__name"
+              >4-ре глобальных урока по инвестициям.</span
+            >
+            <p class="item__descr">
+              Эти уроки помогут вам до конца во всем разобраться, чтобы не
+              оставалось никаких вопросов.
+            </p>
+          </article>
+        </li>
+        <li class="advantages__item advantages__item--full">
+          <article class="item__card--full">
+            <span class="item__name"
+              >5-ть портфелей: долгосрок, среднесрок и три краткосрочных,
+              которые будут обновляться раз в месяц.</span
+            >
+            <p class="item__descr">
+              Эти портфели помогут вам обрести грамотно выстроенную систему
+              инвестирования на различные сроки. Такого вы не найдете больше
+              нигде.
+            </p>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="services section-offset">
+  <div class="container services__container">
+    <h2 class="services__subtitle subtitle">Почему оно того стоит?</h2>
+    <div class="services__content">
+      <div class="services__content-left">
+        <div class="services__tabs">
+          <img
+            loading="lazy"
+            src="./img/before.svg"
+            class="services__image"
+            width="223"
+            height="85"
+            alt=""
+          />
+        </div>
+        <div class="services__text services__text-up">
+          <span class="services__bold">Вы получаете 5 в 1</span> — Платите за
+          один продукт, а получаете множество дополнений.
+        </div>
+        <hr noshade class="services__hr" />
+        <div class="services__text services__text-down">
+          После обучения все остальные инвесторы будут казаться вам смешными.
+        </div>
+      </div>
+      <div class="services__content-right">
+        <ul class="services__list list-reset">
+          <li class="services__item">
+            <div class="services__circle">
+              <img
+                loading="lazy"
+                src="./img/services__svg-1.svg"
+                class="services__image"
+                width="22"
+                height="22"
+                alt=""
+              />
+            </div>
+            <p class="services__text services__text--list">
+              Скидка 55% на первые продажи.
+            </p>
+          </li>
+          <li class="services__item">
+            <div class="services__circle">
+              <img
+                loading="lazy"
+                src="./img/services__svg-2.svg"
+                class="services__image"
+                width="22"
+                height="22"
+                alt=""
+              />
+            </div>
+
+            <p class="services__text services__text--list">
+              Личная работа. Каждый получает книгу и задачник в руки +
+              сертификат.
+            </p>
+          </li>
+          <li class="services__item">
+            <div class="services__circle">
+              <img
+                loading="lazy"
+                src="./img/services__svg-3.svg"
+                class="services__image"
+                width="30"
+                height="30"
+                alt=""
+              />
+            </div>
+
+            <p class="services__text services__text--list">
+              Уникальная книга, на которую я потратил 3 месяца написания и месяц
+              на печать.  Также и задачник. Такого нет нигде и вряд ли будет.
+            </p>
+          </li>
+          <li class="services__item">
+            <div class="services__circle">
+              <img
+                loading="lazy"
+                src="./img/services__svg-4.svg"
+                class="services__image"
+                width="24"
+                height="24"
+                alt=""
+              />
+            </div>
+            <p class="services__text services__text--list">
+              Особый взгляд на инвестиции. Вы получите такие знания, о которых
+              даже не думали ранее.
+            </p>
+          </li>
+          <li class="services__item">
+            <div class="services__circle">
+              <img
+                loading="lazy"
+                src="./img/services__svg-5.svg"
+                class="services__image"
+                width="26"
+                height="26"
+                alt=""
+              />
+            </div>
+            <p class="services__text services__text--list">
+              Практика. В видео уроках вы узнаете, что такое настоящая торговля.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="history section-offset">
+  <div class="container history__container">
+    <h2 class="subtitle history__subtitle">Как создавался продукт?</h2>
+    <div class="history__content">
+      <div class="history__grid history__grid--up">
+        <ul class="list-reset history__list history__list--up">
+          <li class="history__item history__item--first history__item--up">
+            <p class="history__date">25 мая.</p>
+            <span class="history__descr">начало написания книги.</span>
+          </li>
+          <li class="history__item history__item--third history__item--up">
+            <p class="history__date">С 1 по 7 сентября.</p>
+            <span class="history__descr">создали 4 мощнейших видео урока.</span>
+          </li>
+          <li class="history__item history__item--fifth history__item--up">
+            <p class="history__date">25 сентября.</p>
+            <span class="history__descr"
+              >составили 3 портфеля с полным объяснением сделок для:
+              долгосрока, среднесрока и краткосрока.</span
+            >
+          </li>
+        </ul>
+      </div>
+      <img
+        loading="lazy"
+        src="./img/history__svg.svg"
+        class="image"
+        width=""
+        height=""
+        alt=""
+      />
+      <div class="history__grid history__grid--bottom">
+        <ul class="list-reset history__list history__list--bottom">
+          <li class="history__item history__item--second">
+            <p class="history__date">17 августа.</p>
+            <span class="history__descr"
+              >конец написания и начало создания задачника.</span
+            >
+          </li>
+          <li class="history__item history__item--fourth">
+            <p class="history__date">10 сентября.</p>
+            <span class="history__descr"
+              >отдали в печатный дом: книгу, задачник и сертификат.</span
+            >
+          </li>
+          <li class="history__item history__item--sixth">
+            <p class="history__date">16 октября.</p>
+            <span class="history__descr"
+              >вы видите этот сайт и всю нашу подготовку.</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="reviews section-offset">
+  <div class="container reviews__container">
+    <div class="reviews__title">
+      <h2 class="subtitle reviews__subtitle">Отзывы</h2>
+      <span class="reviews__descr"
+        >Чтобы доказать вам правдивость сказанных выше слов, мы дали обучение
+        5ым подписчикам и вот, что они говорят:</span
+      >
+    </div>
+  </div>
+  <div class="reviews__wrapper">
+    <div class="swiper reviews__content">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="reviews__item">
+            <picture>
+              <source srcset="./img/reviews-1.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/reviews-1.png"
+                class="reviews__image"
+                width=""
+                height=""
+                alt=""
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="reviews__item">
+            <picture>
+              <source srcset="./img/reviews-1.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/reviews-1.png"
+                class="reviews__image"
+                width=""
+                height=""
+                alt=""
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="reviews__item">
+            <picture>
+              <source srcset="./img/reviews-1.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/reviews-1.png"
+                class="reviews__image"
+                width=""
+                height=""
+                alt=""
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="reviews__item">
+            <picture>
+              <source srcset="./img/reviews-1.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/reviews-1.png"
+                class="reviews__image"
+                width=""
+                height=""
+                alt=""
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="reviews__item">
+            <picture>
+              <source srcset="./img/reviews-1.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="./img/reviews-1.png"
+                class="reviews__image"
+                width=""
+                height=""
+                alt=""
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container reviews__container">
+    <div class="reviews__content-inner">
+      <div class="card reviews__card reviews__card--white">
+        <p class="card__text">Это то, что и требовалось доказать.</p>
+      </div>
+      <div class="card reviews__card reviews__card--black">
+        <p class="card__text">
+          Наш материал уникален и подобного вы не найдете нигде.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="ticker">
+  <div class="scroller scroller--rotate" data-speed="fast">
+    <ul class="list-reset scroller__inner">
+      <li class="scroller__item">
+        <article class="card scroller__card">
+          <img
+            loading="lazy"
+            src="./img/fire.svg"
+            class="card__image"
+            width="40"
+            height="40"
+            alt=""
+          />
+          <p class="card__text card__text--ticker">
+            1.000 мест до повышения цены
+          </p>
+        </article>
+      </li>
+      <li class="scroller__item">
+        <article class="card scroller__card">
+          <img
+            loading="lazy"
+            src="./img/fire.svg"
+            class="card__image"
+            width="40"
+            height="40"
+            alt=""
+          />
+          <p class="card__text card__text--ticker">
+            1.000 мест до повышения цены
+          </p>
+        </article>
+      </li>
+      <li class="scroller__item">
+        <article class="card scroller__card">
+          <img
+            loading="lazy"
+            src="./img/fire.svg"
+            class="card__image"
+            width="40"
+            height="40"
+            alt=""
+          />
+          <p class="card__text card__text--ticker">
+            1.000 мест до повышения цены
+          </p>
+        </article>
+      </li>
+    </ul>
+  </div>
+  <div class="scroller" data-speed="fast">
+    <ul class="list-reset scroller__inner">
+      <li class="scroller__item">
+        <article class="card scroller__card">
+          <img
+            loading="lazy"
+            src="./img/fire.svg"
+            class="card__image"
+            width="40"
+            height="40"
+            alt=""
+          />
+          <p class="card__text card__text--ticker">
+            1.000 мест до повышения цены
+          </p>
+        </article>
+      </li>
+      <li class="scroller__item">
+        <article class="card scroller__card">
+          <img
+            loading="lazy"
+            src="./img/fire.svg"
+            class="card__image"
+            width="40"
+            height="40"
+            alt=""
+          />
+          <p class="card__text card__text--ticker">
+            1.000 мест до повышения цены
+          </p>
+        </article>
+      </li>
+      <li class="scroller__item">
+        <article class="card scroller__card">
+          <img
+            loading="lazy"
+            src="./img/fire.svg"
+            class="card__image"
+            width="40"
+            height="40"
+            alt=""
+          />
+          <p class="card__text card__text--ticker">
+            1.000 мест до повышения цены
+          </p>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <section class="questions section-offset">
+  <div class="container questions__container">
+    <h2 class="subtitle questions__subtitle">Часто задаваемые вопросы</h2>
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+      <p>Lorem ipsum…</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+      <p>Lorem ipsum…</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+      <p>Lorem ipsum…</p>
+    </div>
+  </div>
+</section>
+
+    <section class="shape section-offset">
+  <div class="container shape__container">
+    <div class="shape__content">
+      <div class="shape__content-left price">
+        <h3 class="price__title">Стоимость</h3>
+        <p class="price__value price__value-new">8.990р</p>
+        <p class="price__value price__value-old">19.990р</p>
+        <span class="price__discount">скидка 55% только на неделю.</span>
+      </div>
+      <div class="shape__content-right fields">
+        <h4 class="fields__title">Заполните форму</h4>
+        <form action="#" class="form fields__form">
+          <input
+            type="text"
+            name="Имя"
+            class="input-reset form__input"
+            placeholder="Артур"
+          />
+
+          <input
+            type="text"
+            name="Почта"
+            class="input-reset form__input"
+            placeholder="name@gmail.com"
+          />
+
+          <button class="btn-reset form__btn">Купить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+  </div>
+</body>
+
+</html>

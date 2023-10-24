@@ -1161,7 +1161,7 @@ a {
   transform: translate(-50%);
   width: 10px;
   height: 460px;
-  background-image: url("../../img/form-hr.svg");
+  background-image: url(".././img/form-hr.svg");
 }
 
 .form {

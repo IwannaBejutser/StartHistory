@@ -12,9 +12,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/swiper */ "./src/js/components/swiper.js");
 /* harmony import */ var _components_infinite_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/infinite-scroll */ "./src/js/components/infinite-scroll.js");
 /* harmony import */ var _components_infinite_scroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_infinite_scroll__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_2__);
-
+/* harmony import */ var _components_accordion_anim__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/accordion-anim */ "./src/js/components/accordion-anim.js");
+/* harmony import */ var _components_accordion_anim__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_accordion_anim__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -154,42 +153,34 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/components/accordion.js":
-/*!****************************************!*\
-  !*** ./src/js/components/accordion.js ***!
-  \****************************************/
+/***/ "./src/js/components/accordion-anim.js":
+/*!*********************************************!*\
+  !*** ./src/js/components/accordion-anim.js ***!
+  \*********************************************/
 /***/ (() => {
 
-var acc = document.getElementsByClassName("accordion");
-var i;
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
+document.addEventListener("DOMContentLoaded", () => {
+  const accordions = document.querySelectorAll(".accordion");
+  accordions.forEach(el => {
+    el.addEventListener("click", e => {
+      const self = e.currentTarget;
+      const control = self.querySelector(".accordion__control");
+      const content = self.querySelector(".accordion__content");
+      self.classList.toggle("open");
 
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
+      // если открыт аккордеон
+      if (self.classList.contains("open")) {
+        control.setAttribute("aria-expanded", true);
+        content.setAttribute("aria-hidden", false);
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        control.setAttribute("aria-expanded", false);
+        content.setAttribute("aria-hidden", true);
+        content.style.maxHeight = null;
+      }
+    });
   });
-}
-var acc = document.getElementsByClassName("accordion");
-var i;
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
+});
 
 /***/ }),
 

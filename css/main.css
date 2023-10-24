@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --font-family: "Suisse Intl", sans-serif;
   --second-family: "Montserrat", sans-serif;
@@ -288,6 +287,116 @@ a {
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.accordion__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.open .accordion__list {
+  gap: 0px;
+}
+
+.accordion__control {
+  padding: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-align: left;
+  border-radius: 20px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.accordion__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  will-change: max-height;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.accordion__title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #598be0;
+}
+
+.accordion__icon {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.accordion__icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 3px;
+  border-radius: 45px;
+  background-color: #598be0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.accordion__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 50%;
+  border-radius: 45px;
+  background-color: #598be0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.open .accordion__icon {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.open .accordion__content {
+  opacity: 1;
+  margin-top: 8px;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background-color: #1a1a1a;
+}
+
+.accordion__text {
+  max-width: 800px;
 }
 
 .hero {
@@ -1003,47 +1112,6 @@ a {
   color: #fff;
 }
 
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.accordion:after {
-  content: "➕"; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: #777;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "➖"; /* Unicode character for "minus" sign (-) */
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.accordion:hover {
-  background-color: #ccc;
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.2s ease-out;
-  transition: max-height 0.2s ease-out;
-}
-
 .shape {
   background-color: #222;
 }
@@ -1109,6 +1177,7 @@ a {
   flex: 1;
 }
 .form__input {
+  position: relative;
   display: inline-block;
   width: 100%;
   font-weight: 600;

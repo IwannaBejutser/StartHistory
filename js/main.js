@@ -231,9 +231,21 @@ __webpack_require__.r(__webpack_exports__);
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
 const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".reviews__content", {
-  slidesPerView: "auto",
-  spaceBetween: 32,
-  centeredSlides: false
+  slidesPerView: 1,
+  spaceBetween: 15,
+  centeredSlides: true,
+  breakpoints: {
+    710: {
+      slidesPerView: "auto",
+      spaceBetween: 32,
+      centeredSlides: false
+    },
+    550: {
+      slidesPerView: 2,
+      spaceBetween: 32,
+      centeredSlides: false
+    }
+  }
 });
 
 /***/ }),

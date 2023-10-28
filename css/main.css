@@ -213,7 +213,7 @@ a {
 }
 @media (max-width: 576px) {
   .section-offset {
-    padding: 65px 0;
+    padding: 50px 0;
   }
 }
 
@@ -682,6 +682,28 @@ a {
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
+  }
+}
+.about__btn {
+  padding: 18px 0;
+  margin: 30px auto 0;
+  width: 100%;
+  max-width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #598be0;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+}
+@media (min-width: 640px) {
+  .about__btn {
+    display: none;
   }
 }
 
@@ -1355,12 +1377,19 @@ a {
   background-color: #222;
 }
 .shape__content {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   min-height: 535px;
-  border-radius: 30px;
+}
+@media (max-width: 910px) {
+  .shape__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .shape__content-left {
   padding: 50px 35px;
@@ -1375,9 +1404,19 @@ a {
   border-radius: 30px;
   background-color: #fff;
 }
+@media (max-width: 910px) {
+  .shape__content-left {
+    padding: 50px 35px 25px;
+    min-width: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 30px 30px 0 0;
+  }
+}
 .shape__content-right {
   position: relative;
-  padding: 60px 50px 60px 67px;
+  padding: 60px 35px 50px 65px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1388,6 +1427,12 @@ a {
   flex-direction: column;
   border-radius: 30px;
   background-color: #fff;
+}
+@media (max-width: 910px) {
+  .shape__content-right {
+    padding: 25px 35px 50px;
+    border-radius: 0 0 30px 30px;
+  }
 }
 
 .shape__content-right::after {
@@ -1402,8 +1447,14 @@ a {
   height: 460px;
   background-image: url(".././img/form-hr.svg");
 }
+@media (max-width: 910px) {
+  .shape__content-right::after {
+    display: none;
+  }
+}
 
 .form {
+  margin-top: 125px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1414,6 +1465,19 @@ a {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+@media (max-width: 910px) {
+  .form {
+    margin-top: 60px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  .form {
+    margin-top: 45px;
+  }
 }
 .form__input {
   position: relative;
@@ -1426,6 +1490,12 @@ a {
 }
 .form__input:not(:nth-child(2)) {
   margin-bottom: 70px;
+}
+@media (max-width: 576px) {
+  .form__input {
+    padding-bottom: 4px;
+    font-size: 14px;
+  }
 }
 .form__btn {
   display: -webkit-box;
@@ -1441,6 +1511,18 @@ a {
   border-radius: 20px;
   background-color: #ff671b;
 }
+@media (max-width: 910px) {
+  .form__btn {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 576px) {
+  .form__btn {
+    padding: 12px 58px;
+    border-radius: 9px;
+    font-size: 16px;
+  }
+}
 
 .price__title {
   margin: 0;
@@ -1449,6 +1531,16 @@ a {
   font-size: 49px;
   color: #000;
   text-align: center;
+}
+@media (max-width: 910px) {
+  .price__title {
+    margin-bottom: 37px;
+  }
+}
+@media (max-width: 576px) {
+  .price__title {
+    font-size: 25px;
+  }
 }
 .price__value {
   margin: 0;
@@ -1462,12 +1554,32 @@ a {
   border-radius: 50px;
   background-color: #598be0;
 }
+@media (max-width: 910px) {
+  .price__value-new {
+    margin-bottom: 12px;
+    padding: 7px 22px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 41px;
+  }
+}
 .price__value-old {
   padding-left: 50px;
   font-weight: 600;
   font-size: 40px;
   text-decoration: line-through;
   color: rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 910px) {
+  .price__value-old {
+    margin-bottom: 25px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .price__value-old {
+    font-size: 29px;
+  }
 }
 .price__discount {
   margin-top: auto;
@@ -1479,6 +1591,12 @@ a {
   border-radius: 20px;
   background-color: #fff0e9;
 }
+@media (max-width: 576px) {
+  .price__discount {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+}
 
 .fields__title {
   margin: 0;
@@ -1486,7 +1604,9 @@ a {
   font-size: 34px;
   color: #000;
 }
-.fields__form {
-  margin-top: 115px;
+@media (max-width: 576px) {
+  .fields__title {
+    font-size: 20px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

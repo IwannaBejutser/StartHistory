@@ -449,7 +449,7 @@ a {
 }
 @media (max-width: 576px) {
   .hero {
-    background: url("../../img/hero-mobile.png") center/cover no-repeat;
+    background: url("./../img/hero-mobile.png") center center/cover no-repeat;
     background-size: 95%;
     background-color: #000;
   }

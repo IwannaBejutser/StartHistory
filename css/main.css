@@ -628,7 +628,6 @@ a {
     margin: 0 auto;
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
   }
 }
 @media (max-width: 576px) {
@@ -765,6 +764,14 @@ a {
   margin-bottom: 50px;
   color: #fff;
 }
+@media (max-width: 1000px) {
+  .advantages__content {
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 .advantages__list {
   display: -ms-grid;
   display: grid;
@@ -775,6 +782,17 @@ a {
   column-gap: 13px;
   row-gap: 8px;
 }
+@media (max-width: 1000px) {
+  .advantages__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 .advantages__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -783,6 +801,11 @@ a {
   grid-column: 1 span;
   background: #fff;
   border-radius: 10px;
+}
+@media (max-width: 1000px) {
+  .advantages__item {
+    padding: 50px 30px;
+  }
 }
 .advantages__item--big {
   -ms-grid-column-span: 2;
@@ -800,6 +823,15 @@ a {
 .advantages__image {
   padding: 90px 23px;
   width: 100%;
+}
+@media (max-width: 1000px) {
+  .advantages__image {
+    margin: 0 auto;
+    padding: 0;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
 }
 
 .item__card {
@@ -822,14 +854,27 @@ a {
 .item__card--full {
   margin: 0 auto;
   padding: 44px 0;
+  max-width: 910px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 911px;
   gap: 70px;
+}
+@media (max-width: 1000px) {
+  .item__card--full {
+    max-width: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .item__name {
   font-weight: 600;

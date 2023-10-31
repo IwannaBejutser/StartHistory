@@ -865,6 +865,7 @@ a {
 }
 @media (max-width: 1000px) {
   .item__card--full {
+    padding: 0;
     max-width: 500px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -874,6 +875,7 @@ a {
     -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
+    gap: 25px;
   }
 }
 .item__name {
@@ -1543,8 +1545,12 @@ a {
   display: flex;
   min-height: 535px;
 }
-@media (max-width: 910px) {
+@media (max-width: 1000px) {
   .shape__content {
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1565,7 +1571,7 @@ a {
   border-radius: 30px;
   background-color: #fff;
 }
-@media (max-width: 910px) {
+@media (max-width: 1000px) {
   .shape__content-left {
     padding: 50px 35px 25px;
     min-width: 0;
@@ -1589,7 +1595,7 @@ a {
   border-radius: 30px;
   background-color: #fff;
 }
-@media (max-width: 910px) {
+@media (max-width: 1000px) {
   .shape__content-right {
     padding: 25px 35px 50px;
     border-radius: 0 0 30px 30px;
@@ -1608,7 +1614,7 @@ a {
   height: 460px;
   background-image: url(".././img/form-hr.svg");
 }
-@media (max-width: 910px) {
+@media (max-width: 1000px) {
   .shape__content-right::after {
     display: none;
   }
@@ -1627,7 +1633,7 @@ a {
   -ms-flex: 1;
   flex: 1;
 }
-@media (max-width: 910px) {
+@media (max-width: 1000px) {
   .form {
     margin-top: 60px;
     -webkit-box-align: center;
@@ -1672,7 +1678,7 @@ a {
   border-radius: 20px;
   background-color: #ff671b;
 }
-@media (max-width: 910px) {
+@media (max-width: 1000px) {
   .form__btn {
     margin-top: 25px;
   }
@@ -1693,7 +1699,7 @@ a {
   color: #000;
   text-align: center;
 }
-@media (max-width: 910px) {
+@media (max-width: 1000px) {
   .price__title {
     margin-bottom: 37px;
   }
@@ -1715,7 +1721,7 @@ a {
   border-radius: 50px;
   background-color: #598be0;
 }
-@media (max-width: 910px) {
+@media (max-width: 1000px) {
   .price__value-new {
     margin-bottom: 12px;
     padding: 7px 22px;
@@ -1731,7 +1737,7 @@ a {
   text-decoration: line-through;
   color: rgba(0, 0, 0, 0.7);
 }
-@media (max-width: 910px) {
+@media (max-width: 1000px) {
   .price__value-old {
     margin-bottom: 25px;
     padding-left: 0;

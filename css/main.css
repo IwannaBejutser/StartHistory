@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --font-family: "Suisse Intl", sans-serif;
   --second-family: "Montserrat", sans-serif;
@@ -218,7 +219,7 @@ a {
 }
 
 .burger {
-  --burger-width: 60px;
+  --burger-width: 30px;
   --burger-height: 30px;
   --burger-line-height: 2px;
   position: relative;
@@ -243,11 +244,24 @@ a {
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
+.burger::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  width: 100%;
+  width: calc(var(--burger-width) + 10px);
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  -webkit-transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
 .burger::before {
   top: 7px;
 }
 .burger::after {
-  top: calc(100% - var(--burger-line-height));
+  top: 21px;
 }
 .burger__line {
   position: absolute;
@@ -485,8 +499,8 @@ a {
 }
 .hero__title--span {
   padding: 1px 9px;
-  color: #000;
-  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
 }
 .hero__inner {
@@ -1154,125 +1168,94 @@ a {
   }
 }
 
-.history__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 70px;
+@media (max-width: 1100px) {
+  .history {
+    display: none;
+  }
 }
 .history__subtitle {
   margin: 0;
 }
 .history__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 15px;
+  position: relative;
+  margin-top: 175px;
 }
-.history__list--up {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 250px 150px 250px 100px 335px;
-  grid-template-columns: 250px 150px 250px 100px 335px;
-  grid-template-areas: "first . second . third .";
+.history__ellipse {
+  position: absolute;
+  width: 20px;
+  height: 20px;
 }
-.history__item {
-  -ms-grid-column-span: 1;
-  grid-column: 1 span;
+.history__ellipse::before {
+  content: "Это псевдоэлемент";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 250px;
+  white-space: pre-wrap;
 }
-.history__item--up {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+.history__ellipse--first {
+  position: absolute;
+  top: 7px;
+  left: -1px;
 }
-.history__item--first {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: first;
+.history__ellipse--first::before {
+  content: "25 мая. \aначало написания книги.";
+  position: absolute;
+  top: -72px;
+  left: 0;
 }
-.history__list--bottom > .history__item--first {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
+.history__ellipse--second {
+  top: -8px;
+  left: 17.3%;
 }
-.history__item--third {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: second;
+.history__ellipse--second::before {
+  content: "17 августа. \aконец написания и начало создания задачника.";
+  position: absolute;
+  top: 61px;
+  left: 0;
 }
-.history__list--bottom > .history__item--third {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
+.history__ellipse--third {
+  top: -8px;
+  left: 32.3%;
 }
-.history__item--fifth {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-  grid-area: third;
+.history__ellipse--third::before {
+  content: "С 1 по 7 сентября. \aсоздали 4 мощнейших видео урока.";
+  position: absolute;
+  top: -75px;
+  left: 0;
 }
-.history__list--bottom > .history__item--fifth {
-  -ms-grid-row: 1;
-  -ms-grid-column: 6;
+.history__ellipse--fourth {
+  top: 3px;
+  left: 44.6%;
 }
-.history__date {
-  margin: 0;
-  font-weight: 400;
-  font-size: 20px;
-  color: #000;
+.history__ellipse--fourth::before {
+  content: "10 сентября. \aотдали в печатный дом : книгу, задачник и сертификат.";
+  position: absolute;
+  top: 50px;
+  left: 0;
 }
-.history__descr {
-  margin: 0;
-  font-weight: 400;
-  font-size: 16px;
-  color: #000;
+.history__ellipse--fifth {
+  top: -8px;
+  left: 62%;
 }
-.history__list--bottom {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 220px 250px 70px 250px 220px;
-  grid-template-columns: 220px 250px 70px 250px 220px;
-  grid-template-areas: ". first . second . third";
+.history__ellipse--fifth::before {
+  content: "25 сентября. \aсоставили 3 портфеля с полным объяснением сделок для : долгосрока, среднесрока и краткосрока.";
+  position: absolute;
+  top: -95px;
+  left: 0;
+  width: 335px;
 }
-.history__item--second {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: first;
+.history__ellipse--sixth {
+  top: 7px;
+  left: 84.5%;
 }
-.history__list--bottom > .history__item--second {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-}
-.history__item--fourth {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: second;
-}
-.history__list--bottom > .history__item--fourth {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-}
-.history__item--sixth {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-  grid-area: third;
-  max-width: 335px;
-}
-.history__list--bottom > .history__item--sixth {
-  -ms-grid-row: 1;
-  -ms-grid-column: 6;
+.history__ellipse--sixth::before {
+  content: "16 октября. \aвы видите этот сайт и всю нашу подготовку.";
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 180px;
 }
 
 .reviews__subtitle {
